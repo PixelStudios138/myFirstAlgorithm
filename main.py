@@ -20,12 +20,13 @@ def choose_items():
     print("4. Donut - $5")
     print("5. Bacon & Egg Roll - $10.99")
     choices = []
+    choice_list = ['1', '2', '3', '4', '5']
     while True:
         # ask for input
         item = input("Enter the number of the item you want to order (or 'done' to finish): ")
         if item.lower() == 'done':
             break
-        elif item in ['1', '2', '3', '4', '5']:
+        elif item in choice_list:
             # add selections to a list
             choices.append(item)
         else:
