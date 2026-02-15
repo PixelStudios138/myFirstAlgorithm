@@ -1,0 +1,3 @@
+# How the algorithm works
+
+This algorithm starts by asking for the user to log in. The user enters his username and password, and will be let in. The username will be used as the name in the receipt. The user will then be prompted to make a selection from the list of 5 items. The user will be allowed to select as many options as he wants. Once finished making their choices, the cost will be calculated, by adding the floating-point prices for all of the selections. The total cost will then be checked to see if it's larger than $10. If so, a 10% discount will be added by multiplying the float by 0.9. Finally, the final cost will be returned along with the user's name and selections as a receipt.
