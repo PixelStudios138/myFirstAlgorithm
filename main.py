@@ -47,8 +47,10 @@ def calculate_total(choices):
     # create variable for total cost
     total = 0
     for choice in choices:
-        # checks each choice to see if it is in the prices dictionary, and 
-        # returns the corresponding price and adds it to the total
+        # Checks each choice to see if it is in the prices dictionary, and 
+        # returns the corresponding price and adds it to the total.
+        # Better than using prices[], as it prevents a KeyError. The 0 is the value
+        # that will be returned should it get a value not in the dictionary
         total += prices.get(choice, 0)
     return total
 
@@ -66,6 +68,8 @@ if __name__ == "__main__":
     # checks to see if discount can be applied
     if total > 10:
         total = apply_discount(total)
-    # print the receipt
+    # print the receipt. The {total:.2f} returns the total cost, but 
+    # rounding it off to 2 decimal places in case a discount is applied and a value 
+    # like $30.302 is returned.
     print(f"Hello {name}, you have selected {len(choices)} items. Your total is: ${total:.2f}")
     
